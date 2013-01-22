@@ -80,6 +80,7 @@ set completeopt=menuone,longest,preview
 noremap <F3> :NumbersToggle<CR>     " Toggle line numbers
 noremap <F4> :NERDTreeToggle<CR>    " Use nerdtree
 noremap <F5> :GundoToggle<CR>      " Map f5 to gundo
+noremap <F6> :Gcommit<CR>
 nmap <F8> :TagbarToggle<CR>        " Toggle the tagbar
 noremap <F9> :Gcommit<CR>         " Gcommit mapped
 
@@ -150,12 +151,13 @@ imap <C-v> <Esc><C-v>a
 " Color Scheme
 " =============
 set t_Co=256
-" colorscheme tomorrow_night
 set background=dark
-""let g:jellybeans_use_lowcolor_black=1
-let g:molokai_original=0
-let g:solarized_termcolors=256
-colorscheme molokai
+" let g:molokai_original=0
+" let g:solarized_termcolors=256
+" let g:jellybeans_use_lowcolor_black=1
+" colorscheme molokai
+" colorscheme Tomorrow-Night
+colorscheme jellybeans
 
 set colorcolumn=81
 set cursorline                  " Show horiz. cursor line
