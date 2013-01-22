@@ -1,8 +1,8 @@
 set nocompatible
+filetype off
 call pathogen#infect()      " add pathogen to vimrc/get all bundles
 call pathogen#helptags()    " Load helptags
 
-filetype off
 filetype plugin indent on
 syntax on
 let python_highlight_all = 1
@@ -86,16 +86,28 @@ noremap <F9> :Gcommit<CR>         " Gcommit mapped
 
 " Settings for python-mode
 " =========================
-map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
+let g:pymode_doc = 1
+let g:pymode_run = 1
+let g:pymode_run_key = '<leader>r'
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_rope = 1
+let g:pymode_rope_enable_autoimport = 1
+let g:pymode_rope_vim_completion = 1
+let g:pymode_rope_auto_project = 1
+let g:pymode_rope_guess_project = 0
+map <Leader>g :call RopeGotoDefinition()<CR>
 let g:pymode_rope_goto_def_newwin = "vnew"
 let g:pymode_rope_extended_complete = 1
 let g:pymode_breakpoint = 0
 let g:pymode_syntax = 1
-"let g:pymode_syntax_builtin_objs = 0
-"let g:pymode_syntax_builtin_funcs = 0
+let g:pymode_syntax_all = 1
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 let g:SuperTabDefaultCompletionType = "context"
+let g:pymode_folding = 1
+let g:pymode_motion = 1
+let g:pymode_virtualenv = 1
 set foldenable
 set foldlevelstart=99
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
