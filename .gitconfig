@@ -1,5 +1,1 @@
-[user]
-	name = Daniel Ryan
-	email = dan@tech-alchemy.com
-[credential]
-	helper = cache --timeout=3600
+gitconfig

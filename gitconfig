@@ -1,0 +1,11 @@
+[user]
+	name = Daniel Ryan
+	email = dan@tech-alchemy.com
+[credential]
+	helper = cache --timeout=3600
+[giggle]
+        main-window-maximized = false
+        main-window-geometry = 1100x824+543+24
+        history-view-vpane-position = 728
+        file-view-vpane-position = 778
+        main-window-view = FileView
