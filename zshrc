@@ -15,6 +15,18 @@ ZSH_THEME="jreese"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls --color=auto"
+alias update="sudo apt-get update && sudo apt-get upgrade"
+alias sudo="sudo -i"
+alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
+alias webserver="python -m SimpleHTTPServer"
+function cd {
+    builtin cd "$@"
+    ENVFILE=".venv"
+    if [ -e "$ENVFILE" ] ; then
+        ENVPATH=$(<$ENVFILE)
+        workon "$ENVPATH"
+    fi
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
