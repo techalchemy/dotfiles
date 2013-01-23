@@ -22,7 +22,7 @@ alias webserver="python -m SimpleHTTPServer"
 function cd {
     builtin cd "$@"
     ENVFILE=".venv"
-    if [ -e "$ENVFILE" ] ; then
+    if [ -f "$ENVFILE" ] ; then
         ENVPATH=$(<$ENVFILE)
         workon "$ENVPATH"
     fi
