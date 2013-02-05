@@ -51,6 +51,8 @@ function cd {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rsync python screen pip virtualenvwrapper node npm)
 
+[ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
