@@ -1,8 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.local/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/jre
 export WORKON_HOME=~/envs
+export EDITOR='vim'
+export ECHO_NEST_API_KEY="VNK6GON9BTILAZSLM"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -12,22 +14,38 @@ export WORKON_HOME=~/envs
 ZSH_THEME="jreese"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="edit ~/.zshrc"
+alias ohmyzsh="edit ~/.oh-my-zsh"
+alias diff="colordiff"
+alias df="df -H"
+alias du="du -ch"
 alias ls="ls --color=auto"
 alias update="sudo apt-get update && sudo apt-get upgrade"
-alias sudo="sudo -i"
+alias install="sudo apt-get install"
+alias su="sudo -i"
 alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
 alias webserver="python -m SimpleHTTPServer"
-function cd {
-    builtin cd "$@"
-    ENVFILE=".venv"
-    if [ -f "$ENVFILE" ] ; then
-        ENVPATH=$(<$ENVFILE)
-        workon "$ENVPATH"
-    fi
-}
 
+#function cd {
+    #builtin cd "$@"
+    #ENVFILE=".venv"
+    #if [ -f "$ENVFILE" ] ; then
+        #ENVPATH=$(<$ENVFILE)
+        #workon "$ENVPATH"
+    #fi
+#}
+
+#man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+            man "$@"
+}
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -49,7 +67,7 @@ function cd {
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rsync python screen pip virtualenvwrapper node npm)
+plugins=(git rsync python screen pip virtualenvwrapper node)
 
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
