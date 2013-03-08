@@ -30,3 +30,7 @@
     autorcrlf = input
     safecrlf = warn
     editor = vim
+[diff]
+	tool = meld
+[merge]
+	tool = meld

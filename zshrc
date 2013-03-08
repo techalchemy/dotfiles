@@ -22,7 +22,7 @@ alias du="du -ch"
 alias ls="ls --color=auto"
 alias update="sudo apt-get update && sudo apt-get upgrade"
 alias install="sudo apt-get install"
-alias su="sudo -i"
+# alias su="sudo -i"
 alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
 alias webserver="python -m SimpleHTTPServer"
 
@@ -77,3 +77,5 @@ source $ZSH/oh-my-zsh.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
+
+PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
