@@ -6,6 +6,7 @@ export WORKON_HOME=~/envs
 export EDITOR='vim'
 export ECHO_NEST_API_KEY="VNK6GON9BTILAZSLM"
 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -67,7 +68,7 @@ man() {
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rsync python screen pip virtualenvwrapper node)
+#plugins=(git rsync python screen pip virtualenvwrapper node)
 
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
