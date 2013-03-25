@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export PATH=~/bin:~/.local/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/jre
 export WORKON_HOME=~/envs
@@ -12,7 +12,7 @@ export ECHO_NEST_API_KEY="VNK6GON9BTILAZSLM"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="jreese"
+#ZSH_THEME="jreese"
 
 # Example aliases
 alias zshconfig="edit ~/.zshrc"
@@ -21,11 +21,13 @@ alias diff="colordiff"
 alias df="df -H"
 alias du="du -ch"
 alias ls="ls --color=auto"
+alias sudo="nocorrect sudo"
 alias update="sudo apt-get update && sudo apt-get upgrade"
 alias install="sudo apt-get install"
 # alias su="sudo -i"
 alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
 alias webserver="python -m SimpleHTTPServer"
+alias update-submodules="git submodule foreach 'git checkout master && git pull origin master'"
 
 #function cd {
     #builtin cd "$@"
@@ -72,8 +74,33 @@ man() {
 
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+source "$HOME/.antigen.zsh"
 
+antigen-lib
+antigen-bundles <<EOBUNDLES
+
+pip
+# Guess what you need to install if command not found
+command-not-found
+git
+rsync
+python
+virtualenvwrapper
+node
+npm
+rake
+rvm
+ruby
+bundler
+zsh-users/zsh-completions src
+zsh-users/zsh-syntax-highlighting
+kennethreitz/autoenv
+
+EOBUNDLES
+
+antigen-theme jreese
+antigen-apply
 # Customize to your needs...
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv

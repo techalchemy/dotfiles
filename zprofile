@@ -28,3 +28,6 @@ EOBUNDLES
 
 antigen-theme jreese
 antigen-apply
+
+export WINEPREFIX=$HOME/wine32
+export WINEARCH=win32
