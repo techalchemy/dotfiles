@@ -29,5 +29,8 @@ EOBUNDLES
 antigen-theme jreese
 antigen-apply
 
+alias lh='ls -l .??*'
+alias lhd='ls -ld .??*'
+
 export WINEPREFIX=$HOME/wine32
 export WINEARCH=win32
