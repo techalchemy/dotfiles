@@ -28,7 +28,7 @@ alias install="sudo apt-get install"
 alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
 alias webserver="python -m SimpleHTTPServer"
 alias update-submodules="git submodule foreach 'git checkout master && git pull origin master'"
-
+alias glog="git log --graph --oneline --decorate --date-order --color --boundary"
 #function cd {
     #builtin cd "$@"
     #ENVFILE=".venv"
@@ -104,6 +104,8 @@ antigen-apply
 # Customize to your needs...
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export DEBFULLNAME="Daniel Ryan"
+export DEBEMAIL="dfryan@andrew.cmu.edu"
 source /usr/local/bin/virtualenvwrapper.sh
 
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting

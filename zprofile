@@ -34,3 +34,5 @@ alias lhd='ls -ld .??*'
 
 export WINEPREFIX=$HOME/wine32
 export WINEARCH=win32
+export PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
+export PAGER="most"

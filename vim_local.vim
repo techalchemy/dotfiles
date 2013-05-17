@@ -18,3 +18,5 @@ let g:pymode_rope_vim_completion = 1
 let g:pymode_rope_guess_project = 0
 let g:pymode_rope_goto_def_newwin = "vnew"
 let g:pymode_rope_always_show_complete_menu = 0
+
+set formatoptions+=n
