@@ -1,54 +1,33 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
-export PATH=~/bin:~/.local/bin:$PATH
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/jre
+ZSH=$HOME/.oh-my-zsh
+export PATH=~/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre
 export WORKON_HOME=~/envs
-export EDITOR='vim'
-export ECHO_NEST_API_KEY="VNK6GON9BTILAZSLM"
-
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="jreese"
+ZSH_THEME="jreese"
 
 # Example aliases
-alias zshconfig="edit ~/.zshrc"
-alias ohmyzsh="edit ~/.oh-my-zsh"
-alias diff="colordiff"
-alias df="df -H"
-alias du="du -ch"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls --color=auto"
-alias sudo="nocorrect sudo"
 alias update="sudo apt-get update && sudo apt-get upgrade"
-alias install="sudo apt-get install"
-# alias su="sudo -i"
+#alias sudo="sudo -i"
 alias myip="wget http://nwdesign.us/myip.php -O - -q ; echo"
 alias webserver="python -m SimpleHTTPServer"
-alias update-submodules="git submodule foreach 'git checkout master && git pull origin master'"
-alias glog="git log --graph --oneline --decorate --date-order --color --boundary"
-#function cd {
-    #builtin cd "$@"
-    #ENVFILE=".venv"
-    #if [ -f "$ENVFILE" ] ; then
-        #ENVPATH=$(<$ENVFILE)
-        #workon "$ENVPATH"
-    #fi
-#}
+# function cd {
+#     builtin cd "$@"
+#     ENVFILE=".venv"
+#     if [ -f "$ENVFILE" ] ; then
+#         ENVPATH=$(<$ENVFILE)
+#         workon "$ENVPATH"
+#     fi
+# }
 
-man() {
-    env \
-        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-        LESS_TERMCAP_md=$(printf "\e[1;31m") \
-        LESS_TERMCAP_me=$(printf "\e[0m") \
-        LESS_TERMCAP_se=$(printf "\e[0m") \
-        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-        LESS_TERMCAP_ue=$(printf "\e[0m") \
-        LESS_TERMCAP_us=$(printf "\e[1;32m") \
-            man "$@"
-}
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -70,42 +49,13 @@ man() {
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(git rsync python screen pip virtualenvwrapper node)
+plugins=(git rsync python screen pip virtualenvwrapper node npm)
 
-[ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
+source $ZSH/oh-my-zsh.sh
 
-#source $ZSH/oh-my-zsh.sh
-source "$HOME/.antigen.zsh"
-
-antigen-lib
-antigen-bundles <<EOBUNDLES
-
-pip
-# Guess what you need to install if command not found
-command-not-found
-git
-rsync
-python
-virtualenvwrapper
-node
-npm
-rake
-rvm
-ruby
-bundler
-zsh-users/zsh-completions src
-zsh-users/zsh-syntax-highlighting
-kennethreitz/autoenv
-
-EOBUNDLES
-
-antigen-theme jreese
-antigen-apply
 # Customize to your needs...
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export DEBFULLNAME="Daniel Ryan"
-export DEBEMAIL="dfryan@andrew.cmu.edu"
 source /usr/local/bin/virtualenvwrapper.sh
 
-PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

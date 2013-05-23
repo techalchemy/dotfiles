@@ -105,3 +105,5 @@ fi
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Server/Projects
 source /usr/local/bin/virtualenvwrapper.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
