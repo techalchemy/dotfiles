@@ -1,4 +1,3 @@
-
 # CASE_SENSITIVE="true"
 # DISABLE_LS_COLORS="true"
 # DISABLE_AUTO_TITLE="true"
@@ -10,8 +9,6 @@
 
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
-# You have to use npm to install npm, and that will give you the
-# completion.sh file you need.
 source /usr/local/lib/node_modules/npm/lib/utils/completion.sh
 
 source "$HOME/.antigen/antigen.zsh"

@@ -1,3 +1,4 @@
+alias node="nodejs"
 alias zshconfig="edit ~/.zshrc"
 alias ohmyzsh="edit ~/.oh-my-zsh"
 alias diff="colordiff"
