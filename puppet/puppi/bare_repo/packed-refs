@@ -1,0 +1,6 @@
+# pack-refs with: peeled 
+1292ffe3647751d970ad60b8d600905957d197c1 refs/remotes/origin/devel
+8a3e2985973adc83f92d257dfcc27b889ebb3315 refs/remotes/origin/face
+3ce894bb218ae04467c0db7953e465c34386a038 refs/remotes/origin/master
+b8ec5a97df8411e3229cb5ee8467c7f3a99aa488 refs/remotes/origin/next-gen
+09d64e11281f44c39b1f2433fcc5e0a7a61a8544 refs/remotes/origin/stackhammer-example42-master
