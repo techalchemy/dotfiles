@@ -1,7 +1,7 @@
 _byobu_sourced=1 . /usr/bin/byobu-launch
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -e /usr/local/texlive/2012/bin ]] && export PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
+[[ -e /usr/local/texlive/2012/bin ]] && PATH=/usr/local/texlive/2012/bin/x86_64-linux:$PATH
 
 export WINEPREFIX=$HOME/wine32
 export WINEARCH=win32

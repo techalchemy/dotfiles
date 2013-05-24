@@ -10,6 +10,10 @@
 
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
+# You have to use npm to install npm, and that will give you the
+# completion.sh file you need.
+source /usr/local/lib/node_modules/npm/lib/utils/completion.sh
+
 source "$HOME/.antigen/antigen.zsh"
 
 antigen use oh-my-zsh
@@ -38,5 +42,4 @@ antigen bundle fabric
 antigen-theme jreese
 antigen-apply
 
-source /etc/bash_completions.d/npm
 source /usr/local/bin/virtualenvwrapper.sh
