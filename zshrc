@@ -4,8 +4,6 @@
 # DISABLE_AUTO_TITLE="true"
 # COMPLETION_WAITING_DOTS="true"
 
-source /usr/local/bin/virtualenvwrapper.sh
-
 [ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
 
 # [ -e "${HOME}/.zprofile" ] && source "${HOME}/.zprofile"
@@ -30,12 +28,15 @@ antigen bundle bundler
 antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle kennethreitz/autoenv
-antigen bundle plugins/command-not-found
-antigen bundle plugins/history
-antigen bundle plugins/tmux
-antigen bundle plugins/vundle
-antigen bundle plugins/sprunge
-antigen bundle plugins/fabric
+antigen bundle command-not-found
+antigen bundle history
+antigen bundle tmux
+antigen bundle vundle
+antigen bundle sprunge
+antigen bundle fabric
 
 antigen-theme jreese
 antigen-apply
+
+source /etc/bash_completions.d/npm
+source /usr/local/bin/virtualenvwrapper.sh
