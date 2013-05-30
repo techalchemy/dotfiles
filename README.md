@@ -1,5 +1,4 @@
-Dotfiles
-#########
+# Dotfiles
 
 These dotfiles are designed to work with ZSH.  See the configuration files
 themselves for more specific dependencies and requirements.
