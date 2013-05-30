@@ -1,16 +1,16 @@
 [user]
-	name = Daniel Ryan\n
+    name = Daniel Ryan
     email = dfryan@andrew.cmu.edu
     signingkey = 8B7E5B31
     logallrefupdates = true
 [credential]
     helper = cache --timeout=3600
 [giggle]
-	main-window-maximized = false
-	main-window-geometry = 700x550+284+109
+    main-window-maximized = false
+    main-window-geometry = 700x550+284+109
     history-view-vpane-position = 728
     file-view-vpane-position = 778
-	main-window-view = FileView
+    main-window-view = FileView
 [color]
     ui = auto
 [color "branch"]
