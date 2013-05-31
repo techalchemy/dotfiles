@@ -74,7 +74,7 @@ fresh_submods.stamp: fresh_repo.stamp
 		@touch fresh_submods.stamp
 
 .PHONY: update
-update: fresh_repo.stamp fresh_submods.stamp
+update: fresh_repo.stamp fresh_submods.stamp vim_update
 
 .PHONY: uninstall
 uninstall: clean
@@ -83,6 +83,17 @@ uninstall: clean
 .PHONY: fonts
 fonts: links
 	fc-cache -vf $(call link_to,fonts)
+
+.PHONY: vim_install
+vim_install: fonts
+	vim +BundleInstall +qall $(repo_path)/README.md
+
+.PHONY: vim_update
+vim_update:
+	vim +BundleUpdate +qall $(repo_path)/README.md
+
+.PHONY: vim
+vim: vim_install
 
 .PHONY: $(direct_links)
 	@mkdir -p "$(addprefix $(target_prefix),$(dir $@))"
