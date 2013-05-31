@@ -1,7 +1,7 @@
 backup_root = $(HOME)/backup/dotfiles
 date := $(shell date --iso=date)
 target_prefix := $(HOME)/.
-repo_dir = $(CURDIR)/dotfiles
+repo_dir:=`[ "dotfiles" = "$(notdir $(CURDIR))" ] && echo $(CURDIR) || echo $(CURDIR)/dotfiles`
 repo_url = https://github.com/techalchemy/dotfiles.git
 
 direct_links := antigen \
