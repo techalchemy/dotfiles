@@ -102,7 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME=$HOME/envs
 export PROJECT_HOME=$HOME/Server/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
