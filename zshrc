@@ -21,22 +21,28 @@ antigen bundle pip
 antigen bundle rsync
 antigen bundle python
 antigen bundle virtualenvwrapper
-antigen bundle node
-antigen bundle npm
+# antigen bundle node
+# antigen bundle npm
 antigen bundle rake
 antigen bundle rvm
+antigen bundle rbenv
+antigen bundle ruby
 antigen bundle bundler
 antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle kennethreitz/autoenv
+# antigen bundle kennethreitz/autoenv
 antigen bundle command-not-found
+antigen bundle history-substring-search
 antigen bundle history
 antigen bundle tmux
-antigen bundle vundle
-antigen bundle sprunge
+# antigen bundle vundle
+# antigen bundle sprunge
 antigen bundle fabric
+antigen bundle vundle
+antigen bundle vi-mode
 
 antigen-theme jreese
 antigen-apply
 
 source /usr/local/bin/virtualenvwrapper.sh
+source /usr/lib/rbenv/completions/rbenv.zsh
